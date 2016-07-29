@@ -627,17 +627,17 @@ namespace SevenKnightsAI.Classes.Mappings
         public static readonly Rectangle R_KeyNormalBase = new Rectangle
         {
             X = 70,
-            Y = 18,
+            Y = 19,
             Width = 60,
-            Height = 40
+            Height = 21
         };
 
         public static readonly Rectangle R_KeyOnTopTimeBase = new Rectangle
         {
             X = 70,
-            Y = 11,
-            Width = 38,
-            Height = 19
+            Y = 10,
+            Width = 60,
+            Height = 21
         };
 
         public static readonly Rectangle R_RubyBase = new Rectangle
@@ -650,10 +650,10 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly Rectangle R_TimeBase = new Rectangle
         {
-            X = 73,
-            Y = 28,
-            Width = 53,
-            Height = 18
+            X = 72,
+            Y = 30,
+            Width = 54,
+            Height = 19
         };
 
         public static readonly Rectangle R_TopazBase = new Rectangle

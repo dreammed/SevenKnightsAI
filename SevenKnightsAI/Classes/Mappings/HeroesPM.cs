@@ -777,7 +777,7 @@ namespace SevenKnightsAI.Classes.Mappings
 			Type = MappingType.ANCHOR
 		};
 
-		public static readonly int KEY_OFFSET_X = 323;
+		public static readonly int KEY_OFFSET_X = 353;
 
 		public static readonly int KEY_OFFSET_Y = 0;
 
@@ -964,6 +964,14 @@ namespace SevenKnightsAI.Classes.Mappings
 			Type = MappingType.BUTTON
 		};
 
-		#endregion Public Fields
-	}
+        public static readonly Rectangle R_HeroCount = new Rectangle
+        {
+            X = 480,
+            Y = 65,
+            Width = 80,
+            Height = 40
+        };
+
+        #endregion Public Fields
+    }
 }

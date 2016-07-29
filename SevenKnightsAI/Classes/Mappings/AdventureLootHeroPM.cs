@@ -5,8 +5,23 @@ namespace SevenKnightsAI.Classes.Mappings
 	
 	internal static class AdventureLootHeroPM
 	{
-		
-		public static readonly PixelMapping AdventureButton = new PixelMapping
+        public static readonly PixelMapping twoStar = new PixelMapping
+        {
+            X = 472,
+            Y = 272,
+            Color = 16166693,
+            Type = MappingType.BOTH
+        };
+
+        public static readonly PixelMapping oneStar = new PixelMapping
+        {
+            X = 480,
+            Y = 271,
+            Color = 16372553,
+            Type = MappingType.BOTH
+        };
+
+        public static readonly PixelMapping AdventureButton = new PixelMapping
 		{
 			X = 895,
 			Y = 363,

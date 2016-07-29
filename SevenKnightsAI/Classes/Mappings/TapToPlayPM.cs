@@ -11,8 +11,8 @@ namespace SevenKnightsAI.Classes.Mappings
 		{
 			X = 115,
 			Y = 34,
-			Color = 16378752,
-			Type = MappingType.ANCHOR
+			Color = 6776692,
+            Type = MappingType.ANCHOR
 		};
 
 		public static readonly PixelMapping TapArea = new PixelMapping

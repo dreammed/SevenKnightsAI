@@ -5,12 +5,20 @@ namespace SevenKnightsAI.Classes.Mappings
 	
 	internal static class AdventureLootGoldPM
 	{
-		
+
+        public static readonly PixelMapping GoldLootIcon = new PixelMapping
+        {
+            X = 444,
+            Y = 269,
+            Color = 16048776,
+            Type = MappingType.BOTH
+        };
+
 		public static readonly PixelMapping AdventureButton = new PixelMapping
 		{
 			X = 886,
 			Y = 368,
-			Color = 9267251,
+			Color = 9332787,
 			Type = MappingType.BOTH
 		};
 
@@ -37,7 +45,7 @@ namespace SevenKnightsAI.Classes.Mappings
 		{
 			X = 786,
 			Y = 480,
-			Color = 5383183,
+			Color = 5317647,
 			Type = MappingType.BOTH
 		};
 	}

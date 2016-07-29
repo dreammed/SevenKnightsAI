@@ -42,7 +42,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 928,
             Y = 490,
-            Color = 4006419,
+            Color = 16444104,
             Type = MappingType.ANCHOR
         };
 
@@ -80,7 +80,7 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly int GOLD_OFFSET_X = 355;
         public static readonly int GOLD_OFFSET_Y = 0;
-        public static readonly int KEY_OFFSET_X = 347;
+        public static readonly int KEY_OFFSET_X = 350;
         public static readonly int KEY_OFFSET_Y = 0;
 
         public static readonly PixelMapping NextButton = new PixelMapping

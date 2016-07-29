@@ -137,9 +137,6 @@ namespace SevenKnightsAI.Classes
 			return AutoSpy.ColorToInt(snap.Image.GetPixel(x, y));
 		}
 
-		[DllImport("user32.dll")]
-		public static extern bool GetWindowRect(IntPtr hwnd, ref Rect rectangle);
-
 		[DllImport("user32.dll", SetLastError = true)]
 		public static extern void GetWindowText(IntPtr handle, StringBuilder resultWindowText, int maxTextCapacity);
 

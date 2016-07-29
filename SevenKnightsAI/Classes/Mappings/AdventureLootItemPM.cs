@@ -5,8 +5,7 @@ namespace SevenKnightsAI.Classes.Mappings
 	
 	internal static class AdventureLootItemPM
 	{
-		
-		public static readonly PixelMapping AdventureButton = new PixelMapping
+        public static readonly PixelMapping AdventureButton = new PixelMapping
 		{
 			X = 894,
 			Y = 368,

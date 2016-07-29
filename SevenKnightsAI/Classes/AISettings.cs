@@ -54,7 +54,10 @@ namespace SevenKnightsAI.Classes
 		[XmlElement(ElementName = "AD_StopOnFullHeroes")]
 		public bool AD_StopOnFullHeroes;
 
-		[XmlElement(ElementName = "AD_Team")]
+        [XmlElement(ElementName = "AD_CheckingHeroes")]
+        public bool AD_CheckingHeroes;
+
+        [XmlElement(ElementName = "AD_Team")]
 		public Team AD_Team;
 
 		[XmlElement(ElementName = "AD_Wave1Loop")]
@@ -270,6 +273,7 @@ namespace SevenKnightsAI.Classes
 			this.AD_ElementHeroesOnly = false;
 			this.AD_SkillType = SkillType.Both;
 			this.AD_StopOnFullHeroes = true;
+            this.AD_CheckingHeroes = true;
 			this.AD_Wave1Loop = false;
 			this.AD_Wave2Loop = false;
 			this.AD_Wave3Loop = false;
@@ -438,7 +442,13 @@ namespace SevenKnightsAI.Classes
 				}
 				catch (Exception)
 				{ }
-				try
+                try
+                {
+                    aISettings.AD_CheckingHeroes = (bool)dictionary["AD_CheckingHeroes"];
+                }
+                catch (Exception)
+                { }
+                try
 				{
 					aISettings.AD_Wave1Skills = ((dictionary["AD_Wave1Skills"] == null) ? null : ((JArray)dictionary["AD_Wave1Skills"]).ToObject<int[]>());
 				}
@@ -899,7 +909,11 @@ namespace SevenKnightsAI.Classes
 					"AD_StopOnFullHeroes",
 					this.AD_StopOnFullHeroes
 				},
-				{
+                                {
+                    "AD_CheckingHeroes",
+                    this.AD_CheckingHeroes
+                },
+                {
 					"AD_Wave1Skills",
 					this.AD_Wave1Skills
 				},

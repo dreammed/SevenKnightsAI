@@ -12,8 +12,23 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ApplicationManifest>app.manifest</ApplicationManifest>
-    <ApplicationIcon>rachel.ico</ApplicationIcon>
+    <ApplicationIcon>icons\teo.ico</ApplicationIcon>
     <StartupObject>SevenKnightsAI.Program</StartupObject>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>0.1.1.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -69,6 +84,7 @@
     <Compile Include="Classes\ArchiveManager.cs" />
     <Compile Include="Classes\AutoSpy.cs" />
     <Compile Include="Classes\BlueStacks.cs" />
+    <Compile Include="Classes\BuildInfo.cs" />
     <Compile Include="Classes\BuyKeyHonorsType.cs" />
     <Compile Include="Classes\BuyKeyRubiesType.cs" />
     <Compile Include="Classes\CursorHelper.cs" />
@@ -81,6 +97,7 @@
     <Compile Include="Classes\HotTimeHelper.cs" />
     <Compile Include="Classes\Imaging\ImageHashing.cs" />
     <Compile Include="Classes\Imaging\LockBitmap.cs" />
+    <Compile Include="Classes\Mappings\AdsClosePM.cs" />
     <Compile Include="Classes\Mappings\AdsPM.cs" />
     <Compile Include="Classes\Mappings\AdventureFightPM.cs" />
     <Compile Include="Classes\Mappings\AdventureLootGoldPM.cs" />
@@ -181,7 +198,6 @@
     <Compile Include="Classes\ProfileComboBoxItem.cs" />
     <Compile Include="Classes\ProgressArgs.cs" />
     <Compile Include="Classes\ProgressType.cs" />
-    <Compile Include="Classes\Rect.cs" />
     <Compile Include="Classes\ResourceType.cs" />
     <Compile Include="Classes\Scene.cs" />
     <Compile Include="Classes\SceneType.cs" />
@@ -244,17 +260,26 @@
     <None Include="icons\SevenKnights.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="icons\banner_main.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="icons\rachel.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="icons\rachel.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="rachel.ico" />
+    <None Include="icons\teo.ico" />
+    <None Include="icons\banner_main_teo.png" />
     <EmbeddedResource Include="Resources\Alien_AlarmDrum-KevanGC-893953959.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

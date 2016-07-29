@@ -11,6 +11,7 @@ using System.Globalization;
 using System.IO;
 using System.Media;
 using System.Net;
+using System.Reflection;
 using System.Security.Principal;
 using System.Threading;
 using System.Windows.Forms;
@@ -20,6 +21,7 @@ namespace SevenKnightsAI
 	public partial class MainForm : Form
 	{
 		#region Private Fields
+
 		private readonly CheckBox[][] _formationCheckBoxes = new CheckBox[2][];
 
 		private readonly Point[][] _formationPositions = new Point[][]
@@ -108,11 +110,11 @@ namespace SevenKnightsAI
 			}
 		}
 
-		#endregion Public Properties
+        #endregion Public Properties
 
-		#region Public Constructors
+        #region Public Constructors
 
-		public MainForm()
+        public MainForm()
 		{
 			this.InitializeComponent();
 			this.Init();
@@ -136,11 +138,11 @@ namespace SevenKnightsAI
 			}));
 		}
 
-		#endregion Public Methods
+        #endregion Public Methods
 
-		#region Private Methods
+        #region Private Methods
 
-		private void AD_continuousCheckBox_CheckedChanged(object sender, EventArgs e)
+        private void AD_continuousCheckBox_CheckedChanged(object sender, EventArgs e)
 		{
 			CheckBox checkBox = sender as CheckBox;
 			this.AISettings.AD_Continuous = checkBox.Checked;
@@ -413,9 +415,16 @@ namespace SevenKnightsAI
 							this.arenaCountLabel.Text = string.Format("{0} (Win/Lose): {1}/{2}", arg, num, num2);
 							return;
 						}
+
 						int num3 = (int)dictionary["count"];
-						string text = string.Format("{0}: {1} time{2}", arg, num3, (num3 > 1) ? "s" : string.Empty);
-						switch (objective)
+						string text = string.Format("{0}: {1}", arg, num3);
+                        if (objective == Objective.HERO_MANAGEMENT)
+                        {
+                            string t1 = ""+dictionary["hc"];
+                            string t2 = ""+ dictionary["hm"];
+                            text = string.Format("H : {0} / {1}",t1 , t2);
+                        }
+                        switch (objective)
 						{
 							case Objective.ADVENTURE:
 								this.adventureCountLabel.Text = text;
@@ -431,6 +440,10 @@ namespace SevenKnightsAI
 							case Objective.RAID:
 								this.raidCountLabel.Text = text;
 								return;
+
+                            case Objective.HERO_MANAGEMENT:
+                                this.HeroCountLabel.Text = text;
+                                return;
 
 							default:
 								return;
@@ -542,7 +555,7 @@ namespace SevenKnightsAI
 
 		private void contactUsLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
-			Process.Start("https://www.nulled.cr/topic/154393-heartcold-seven-knights-ai-v23-updated-for-v1044");
+			Process.Start("https://github.com/Nulled-Daelus/SevenKnightsAI");
 		}
 
 		private void contactUsLinkLabel_TextChanged(object sender, EventArgs e)
@@ -666,6 +679,7 @@ namespace SevenKnightsAI
 			this.AD_elementHeroesCheckBox.Checked = this.AISettings.AD_ElementHeroesOnly;
 			this.AD_masteryComboBox.SelectedIndex = (int)this.AISettings.AD_Mastery;
 			this.AD_StopOnFullHeroes_Checkbox.Checked = this.AISettings.AD_StopOnFullHeroes;
+            this.AD_CheckingHeroes_Checkbox.Checked = this.AISettings.AD_CheckingHeroes;
 			this.AD_wave1LoopCheckBox.Checked = this.AISettings.AD_Wave1Loop;
 			this.AD_wave2LoopCheckBox.Checked = this.AISettings.AD_Wave2Loop;
 			this.AD_wave3LoopCheckBox.Checked = this.AISettings.AD_Wave3Loop;
@@ -1044,7 +1058,9 @@ namespace SevenKnightsAI
 
 			//Loading Sound file and preparing it to play if needed.
 			this.AlertSound = new SoundPlayer(SevenKnightsAI.Properties.Resources.Alien_AlarmDrum_KevanGC_893953959);
-
+			string build = "v" + this.ProductVersion + "-" + Assembly.GetExecutingAssembly().GetLinkerTime().ToShortDateString();
+			this.tsslBuildInfo.Text = "Build: " + build;
+			AppendLog("Loaded Build: " + build);
 			this.loaded = true;
 		}
 
@@ -1744,5 +1760,12 @@ namespace SevenKnightsAI
 		}
 
         #endregion Private Methods
-    }
+
+        private void AD_CheckingHeroes_Checkbox_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            this.AISettings.AD_CheckingHeroes = checkBox.Checked;
+        }
+
+	}
 }

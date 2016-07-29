@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Resources;
+using System;
 using System.Diagnostics;
 using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -7,18 +8,19 @@ using System.Runtime.Versioning;
 using System.Security;
 using System.Security.Permissions;
 
-[assembly: AssemblyVersion("2.3.0.0")]
+[assembly: AssemblyVersion("0.1")]
 [assembly: Debuggable(DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: AssemblyCompany("Heartcold")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCopyright("Copyright ©  2015 Heartcold / Punnawut K.")]
-[assembly: AssemblyDescription("Seven Knights AI by Heartcold")]
-[assembly: AssemblyFileVersion("2.3.0.0")]
-[assembly: AssemblyProduct("Seven Knights AI by Heartcold")]
+[assembly: AssemblyCopyright("")]
+[assembly: AssemblyDescription("Seven Knights AI")]
+[assembly: AssemblyFileVersion("0.1")]
+[assembly: AssemblyProduct("Seven Knights AI")]
 [assembly: AssemblyTitle("Seven Knights AI")]
 [assembly: AssemblyTrademark("")]
 [assembly: CompilationRelaxations(8)]
 [assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
 [assembly: ComVisible(false)]
-[assembly: Guid("b55fdf8b-4769-4352-a811-b57299d7019b")]
-[assembly: SecurityPermission(SecurityAction.RequestMinimum, SkipVerification = true)]
+[assembly: Guid("a79d1412-0955-4367-ba14-70c298f68917")]
+[assembly: NeutralResourcesLanguage("en")]
+//[assembly: SecurityPermission(SecurityAction.RequestMinimum, SkipVerification = true)]

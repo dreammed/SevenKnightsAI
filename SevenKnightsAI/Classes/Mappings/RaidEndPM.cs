@@ -10,7 +10,7 @@ namespace SevenKnightsAI.Classes.Mappings
 		{
 			X = 908,
 			Y = 242,
-			Color = 5383183,
+			Color = 4989456,
 			Type = MappingType.BOTH
 		};
 
@@ -19,7 +19,7 @@ namespace SevenKnightsAI.Classes.Mappings
 		{
 			X = 899,
 			Y = 131,
-			Color = 15522684,
+			Color = 15588477,
 			Type = MappingType.BOTH
 		};
 
@@ -37,7 +37,7 @@ namespace SevenKnightsAI.Classes.Mappings
 		{
 			X = 906,
 			Y = 364,
-			Color = 13939542,
+			Color = 9070115,
 			Type = MappingType.BOTH
 		};
 	}

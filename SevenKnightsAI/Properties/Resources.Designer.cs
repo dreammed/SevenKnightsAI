@@ -72,9 +72,9 @@ namespace SevenKnightsAI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap banner_main {
+        internal static System.Drawing.Bitmap banner_main_teo {
             get {
-                object obj = ResourceManager.GetObject("banner_main", resourceCulture);
+                object obj = ResourceManager.GetObject("banner_main_teo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -232,20 +232,10 @@ namespace SevenKnightsAI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
-        internal static System.Drawing.Icon rachel {
+        internal static System.Drawing.Icon teo {
             get {
-                object obj = ResourceManager.GetObject("rachel", resourceCulture);
+                object obj = ResourceManager.GetObject("teo", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap rachel1 {
-            get {
-                object obj = ResourceManager.GetObject("rachel1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
