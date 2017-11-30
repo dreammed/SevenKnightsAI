@@ -172,9 +172,9 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping TopChest = new PixelMapping
         {
-            X = 696,
-            Y = 27,
-            Color = 4077875,
+            X = 767,
+            Y = 25,
+            Color = 13482906,
             Type = MappingType.ANCHOR
         };
 

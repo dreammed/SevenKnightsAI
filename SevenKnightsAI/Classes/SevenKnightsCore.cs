@@ -2916,6 +2916,7 @@ namespace SevenKnightsAI.Classes
                                             {
                                                 if (this.AISettings.AD_ElementHeroesOnly)
                                                 {
+                                                    
                                                     if (this.MatchMapping(HeroesPM.ElementButton, 2))
                                                     {
                                                         this.WeightedClick(HeroesPM.ElementButton, 1.0, 1.0, 1, 0, "left");
@@ -3591,6 +3592,7 @@ namespace SevenKnightsAI.Classes
             Team aD_Team = this.AISettings.AD_Team;
             Formation aD_Formation = this.AISettings.AD_Formation;
             List<int> list = new List<int>(this.AISettings.AD_HeroManagePositions);
+            this.Log("1");
             if (aD_Formation == Formation.None || list == null)
             {
                 this.DoneManageHeroes();

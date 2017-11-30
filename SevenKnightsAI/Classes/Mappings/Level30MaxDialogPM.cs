@@ -6,9 +6,9 @@ namespace SevenKnightsAI.Classes.Mappings
     {
         public static readonly PixelMapping CharacterEye = new PixelMapping
         {
-            X = 163,
-            Y = 118,
-            Color = 15654860,
+            X = 161,
+            Y = 123,
+            Color = 4004627,
             Type = MappingType.ANCHOR
         };
 
@@ -16,23 +16,23 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 943,
             Y = 322,
-            Color = 10581299,
+            Color = 6375195,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping OkButton = new PixelMapping
         {
-            X = 835,
-            Y = 467,
+            X = 856,
+            Y = 489,
             Color = 0,
             Type = MappingType.BUTTON
         };
 
         public static readonly PixelMapping YellowTick = new PixelMapping
         {
-            X = 820,
-            Y = 485,
-            Color = 16761637,
+            X = 787,
+            Y = 495,
+            Color = 16759067,
             Type = MappingType.ANCHOR
         };
     }

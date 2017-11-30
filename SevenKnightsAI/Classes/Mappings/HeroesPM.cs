@@ -23,16 +23,16 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping ElementButton = new PixelMapping
         {
-            X = 682,
-            Y = 90,
-            Color = 7353345,
+            X = 494,
+            Y = 507,
+            Color = 5641984,
             Type = MappingType.BOTH
         };
 
         public static readonly PixelMapping F1B4_1 = new PixelMapping
         {
-            X = 167,
-            Y = 298,
+            X = 500,
+            Y = 499,
             Color = 0,
             Type = MappingType.BUTTON
         };
